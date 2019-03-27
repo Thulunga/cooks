@@ -1,0 +1,6 @@
+ function MakeSet(x)
+   if x is not already present:
+     add x to the disjoint-set tree
+     x.parent := x
+     x.rank   := 0
+     x.size   := 1

@@ -1,0 +1,16 @@
+   ReachSet = {0};                    // You can use any node...
+   UnReachSet = {1, 2, ..., N-1};
+   SpanningTree = {};
+
+   while ( UnReachSet ≠ empty )
+   {
+      Find edge e = (x, y) such that:
+         1. x ∈ ReachSet
+	 2. y ∈ UnReachSet
+	 3. e has smallest cost
+
+      SpanningTree = SpanningTree ∪ {e};
+
+      ReachSet   = ReachSet ∪ {y};
+      UnReachSet = UnReachSet - {y};
+   }

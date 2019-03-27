@@ -1,0 +1,6 @@
+ function Find(x)
+   while x.parent != x
+     prev := x
+     x := x.parent
+     prev.parent := x.parent
+   return x

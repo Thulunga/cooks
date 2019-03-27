@@ -1,0 +1,16 @@
+ function Union(x, y)
+   xRoot := Find(x)
+   yRoot := Find(y)
+ 
+   // x and y are already in the same set
+   if xRoot == yRoot            
+       return
+ 
+   // x and y are not in same set, so we merge them
+   if xRoot.rank < yRoot.rank
+     xRoot, yRoot := yRoot, xRoot // swap xRoot and yRoot
+ 
+   // merge yRoot into xRoot
+   yRoot.parent := xRoot
+   if xRoot.rank == yRoot.rank:
+     xRoot.rank := xRoot.rank + 1
